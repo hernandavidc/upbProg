@@ -19,10 +19,18 @@
    },
    listarBlogs: function(req, res)
     {
-      Blog.findOne({id: req.param("id")}, function(err, found){
-        console.log(found);
-        console.log("puto el que lo lea");
-         res.send(found);
-      })
+      Blog.findOne({
+        id: req.param("id")
+      }).exec(function (err, found){
+        if (err) {
+          return res.serverError(err);
+        }
+        if (!found) {
+          return res.notFound('Could not find Finn, sorry.');
+        }
+
+        sails.log('Found "%s"', found);
+        return res.json(finn);
+      });
     }
  };

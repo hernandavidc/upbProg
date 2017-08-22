@@ -13,7 +13,6 @@
      Autor: {
        type: 'string'
      },
-
      Texto: {
        type: 'text',
      },
