@@ -16,9 +16,7 @@
           return res.notFound('Could not find, sorry.');
         }
         sails.log('Found "%s"', found);
-        return res.view('entradas/entrada', {
-          "Entrada": found
-        });
+          return res.json(found);
       });
     }
  };

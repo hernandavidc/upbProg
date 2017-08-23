@@ -13,7 +13,8 @@
         if(err){
           console.log(err);
         }
-          return res.view({"blogs": b});
+        sails.log('Found "%s"', b);
+          return res.json(b);
       });
    },
    listarBlogs: function(req, res)
@@ -26,8 +27,7 @@
           return res.notFound('Could not find Finn, sorry.');
         }
         sails.log('Found "%s"', found);
-        return res.view('blog/entradas', {
-          "blogPedido": found
+          return res.json(found);
         });
       });
     }
