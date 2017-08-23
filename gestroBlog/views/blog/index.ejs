@@ -1,8 +1,7 @@
 <div>
-  <%= blogs %>
     <ul>
      <% _.each(blogs, function (blog) { %>
-       <li><%= blog.Autor %></li>
+       <li> <a href='/blog/<%= blog.id %>'> <%= blog.Nombre %> </a> </li>
      <% }) %>
   </ul>
 </div>

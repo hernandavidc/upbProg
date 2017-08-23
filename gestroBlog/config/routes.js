@@ -33,7 +33,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': 'BlogController.index',
-  'GET /blog/:id': 'BlogController.listarBlogs'
+  'GET /blog/:id': 'BlogController.listarBlogs',
+  'GET /blog/:idBlog/entrada/:idEntrada': 'EntradasController.detalleEntrada'
 
 
 

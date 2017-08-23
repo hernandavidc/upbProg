@@ -1,0 +1,7 @@
+<div>
+    <ul>
+     <% _.each(blogPedido.Entradas, function (entrada) { %>
+       <li> <a href='/blog/<%= blogPedido.id %>/entrada/<%= entrada.id %>'> <%= entrada.Titulo %> </a> </li>
+     <% }) %>
+  </ul>
+</div>

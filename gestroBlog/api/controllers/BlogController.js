@@ -13,24 +13,22 @@
         if(err){
           console.log(err);
         }
-          console.log(b);
           return res.view({"blogs": b});
       });
    },
    listarBlogs: function(req, res)
     {
-      Blog.findOne({
-        id: req.param("id")
-      }).exec(function (err, found){
+      Blog.findOne({id: req.param("id")}).populate('Entradas').exec(function (err, found){
         if (err) {
           return res.serverError(err);
         }
         if (!found) {
           return res.notFound('Could not find Finn, sorry.');
         }
-
         sails.log('Found "%s"', found);
-        return res.json(finn);
+        return res.view('blog/entradas', {
+          "blogPedido": found
+        });
       });
     }
  };

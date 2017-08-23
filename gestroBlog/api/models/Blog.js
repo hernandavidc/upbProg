@@ -14,7 +14,7 @@
        type: 'string'
      },
      Entradas:{
-       colection: 'Entradas',
+       collection: 'Entradas',
        via: 'owner'
     }
    }
