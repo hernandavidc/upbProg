@@ -29,6 +29,5 @@
         sails.log('Found "%s"', found);
           return res.json(found);
         });
-      });
-    }
- };
+      }
+    };
