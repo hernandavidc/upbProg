@@ -9,16 +9,21 @@ module.exports = {
 	index: function(req, res)
    {
 
-		 var url = 'http://localhost:3000/blog';
+		 var http = require('http');
+		 var url = 'http://maps.googleapis.com/maps/api/geocode/json?address=google';
 
-	  require("http").get(url, function(res) {
-	       var r = JSON.parse(res)
-	       console.log("Got response: " + r);
-				 return res.json(r);
-	     }).on('error', function(e) {
-	       console.log("Got error: " + e.message);
-				 return res.json(e.message);
-	  });
+		 http.get(url, function(res) {
+		      var body = '';
+		      res.on('data', function(chunk) {
+		         body += chunk;
+		      });
+		      res.on('end', function() {
+		        var result = JSON.parse(body)
+		        console.log(result);
+		      });
+		    }).on('error', function(e) {
+		      console.log("Error: " + e.message);
+		 });
 		 /**
 		var request = require('request');
 
