@@ -14,7 +14,7 @@
           console.log(err);
         }
         sails.log('Found "%s"', b);
-          return res.json(b);
+        return res.json(b);
       });
    },
    listarBlogs: function(req, res)
