@@ -14,12 +14,13 @@ module.exports = {
 
 		 http.get(url, function(res) {
 		      var body = '';
+					var result = '';
 		      res.on('data', function(chunk) {
 		         body += chunk;
 		      });
 		      res.on('end', function() {
-		        var result = JSON.parse(body)
-		        console.log(result);
+		        result = JSON.parse(body)
+						responder(result);
 		      });
 		    }).on('error', function(e) {
 		      console.log("Error: " + e.message);
@@ -37,5 +38,9 @@ module.exports = {
 		    sails.log.info(response);
 		  }
 		});*/
+			function responder(result){
+				console.log(result);
+				return res.json(result);
+			}
    }
 };
