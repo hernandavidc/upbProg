@@ -10,42 +10,44 @@ module.exports = {
    {
 
 		 var http = require('http');
-		 var rutas = ['http://10.152.164.150:3000/', 'http://127.0.0.1:3000/blog'];
-		 var result = '';
-		 rutas.forEach(function(ruta) {
-			    result = pedir(ruta);
-			});
-		 /**
-		var request = require('request');
+		 var url1 = 'http://10.152.164.150:3000';
+		 var url2 = 'http://10.152.164.121:8080';
 
-		request.get({
-		  url: 'http://localhost:8080/'
-		}, function(error, response, body) {
-		  if (error) {
-		    sails.log.error(error);
-		  }
-		  else {
-		    sails.log.info(response);
-		  }
-		});*/
-		function pedir(url){
-			http.get(url, function(res) {
- 		      var body = '';
- 					var result = '';
- 		      res.on('data', function(chunk) {
- 		         body += chunk;
- 		      });
- 		      res.on('end', function() {
- 		        result = JSON.parse(body)
- 						responder(result);
- 		      });
- 		    }).on('error', function(e) {
- 		      console.log("Error: " + e.message);
- 		 });
-		}
-			function responder(result){
-				sails.log(result);
-				return result;
+		 http.get(url1, function(res) {
+		      var body = '';
+					var result = '';
+		      res.on('data', function(chunk) {
+		         body += chunk;
+		      });
+		      res.on('end', function() {
+		        result = JSON.parse(body)
+						traer1 = result;
+						http.get(url2, function(res) {
+			 		      var body = '';
+			 					var result2 = '';
+			 		      res.on('data', function(chunk) {
+			 		         body += chunk;
+			 		      });
+			 		      res.on('end', function() {
+			 		        result2 = JSON.parse(body)
+			 						traer2 = result2;
+			 						responder(result,result2);
+			 		      });
+			 		    }).on('error', function(e) {
+			 		      console.log("Error: " + e.message);
+			 		 });
+
+					//responder(result);
+		      });
+		    }).on('error', function(e) {
+		      console.log("Error: " + e.message);
+		 });
+
+
+
+			function responder(result1,result2){
+				console.log(JSON.stringify(result1)+ "------" + JSON.stringify(result2));
+				return res.send(JSON.stringify(result1)+ "\n" + JSON.stringify(result2));
 			}
    }
 };
