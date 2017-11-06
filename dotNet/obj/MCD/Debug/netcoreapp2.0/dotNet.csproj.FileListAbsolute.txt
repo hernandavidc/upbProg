@@ -1,0 +1,10 @@
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\obj\MCD\Debug\netcoreapp2.0\dotNet.csproj.CoreCompileInputs.cache
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\obj\MCD\Debug\netcoreapp2.0\dotNet.AssemblyInfoInputs.cache
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\obj\MCD\Debug\netcoreapp2.0\dotNet.AssemblyInfo.cs
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\bin\MCD\Debug\netcoreapp2.0\dotNet.deps.json
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\bin\MCD\Debug\netcoreapp2.0\dotNet.runtimeconfig.json
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\bin\MCD\Debug\netcoreapp2.0\dotNet.runtimeconfig.dev.json
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\bin\MCD\Debug\netcoreapp2.0\dotNet.dll
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\bin\MCD\Debug\netcoreapp2.0\dotNet.pdb
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\obj\MCD\Debug\netcoreapp2.0\dotNet.dll
+C:\Users\FranciscoAlvarezFons\Desktop\templates\progWebUPB\dotNet\obj\MCD\Debug\netcoreapp2.0\dotNet.pdb
