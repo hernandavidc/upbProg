@@ -1,0 +1,9 @@
+nav{
+  background: #fff;
+  color: #49898D;
+  border-bottom: 1px solid #49898D;
+}
+
+nav ul a {
+  color: #49898D;
+}
