@@ -7,3 +7,10 @@ nav{
 nav ul a {
   color: #49898D;
 }
+
+.floatForm{
+  background: #fff;
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
